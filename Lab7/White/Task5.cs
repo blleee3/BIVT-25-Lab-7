@@ -5,25 +5,25 @@ namespace Lab7.White
         public struct Match
         {
             //Поля
-            private int _goll;
-            private int _negoll;
+            private int _goal;
+            private int _negoal;
 
             //Свойства
-            public int Goals => _goll;
-            public int Misses => _negoll;
+            public int Goals => _goal;
+            public int Misses => _negoal;
             public int Difference
             {
                 get
                 {
-                    return _goll-_negoll;
+                    return _goal-_negoal;
                 }
             }
             public int Score
             {
                 get
                 {
-                    if (_goll > _negoll) return 3;       //Победа
-                    else if (_goll == _negoll) return 1; //Ничья
+                    if (_goal > _negoal) return 3;       //Победа
+                    else if (_goal == _negoal) return 1; //Ничья
                     else return 0;                       //Поражение
                 }
             }
@@ -31,8 +31,8 @@ namespace Lab7.White
             //Конструктор 
             public Match(int goals, int misses)
             {
-                _goll = goals;
-                _negoll = misses;
+                _goal = goals;
+                _negoal = misses;
             }
             //Методы
             public void Print()
